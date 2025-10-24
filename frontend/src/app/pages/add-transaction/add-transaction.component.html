@@ -1,0 +1,24 @@
+<form (ngSubmit)="addTransaction()" #txForm="ngForm">
+  <input type="number" [(ngModel)]="amount" name="amount" placeholder="Amount" required />
+
+  <select [(ngModel)]="category" name="category" required>
+    <option value="" disabled selected>Select Category</option>
+    <option value="food">Food</option>
+    <option value="shopping">Shopping</option>
+    <option value="transport">Transport</option>
+    <option value="health">Health</option>
+    <option value="entertainment">Entertainment</option>
+    <option value="other">Other</option>
+  </select>
+
+  <input type="text" [(ngModel)]="description" name="description" placeholder="Description" required />
+
+  <input type="date" [(ngModel)]="date" name="date" required />
+
+  <select [(ngModel)]="type" name="type" required>
+    <option value="expense">Expense</option>
+    <option value="income">Income</option>
+  </select>
+
+  <button type="submit" [disabled]="!txForm.form.valid">Add</button>
+</form>
