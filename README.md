@@ -86,6 +86,5 @@ Frontend (Angular)
 
 
 Автор:
-Дарья Башар
-2 курс, КБТУ
+Ахметова Амина
 Fullstack разработка: Django + Angular
